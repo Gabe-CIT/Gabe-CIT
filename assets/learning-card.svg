@@ -1,0 +1,107 @@
+<svg fill="none" viewBox="0 0 850 200" width="850" height="200" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        :root {
+          --bg:      #ffffff;
+          --card:    #f6f8fa;
+          --border:  #d0d7de;
+          --text:    #1f2328;
+          --muted:   #57606a;
+          --accent:  #1a7f37;
+          --glow:    rgba(26,127,55,0.30);
+        }
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --bg:      #0d1117;
+            --card:    #161b22;
+            --border:  #30363d;
+            --text:    #c9d1d9;
+            --muted:   #8b949e;
+            --accent:  #3fb950;
+            --glow:    rgba(63,185,80,0.35);
+          }
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        .wrap {
+          width: 850px;
+          height: 200px;
+          background: var(--bg);
+          padding: 24px 32px;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+          color: var(--text);
+        }
+        .header {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 14px;
+        }
+        .pulse {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: var(--accent);
+          box-shadow: 0 0 0 0 var(--glow);
+          animation: pulse 2s ease-out infinite;
+        }
+        .title {
+          font-size: 22px;
+          font-weight: 700;
+          letter-spacing: -0.3px;
+        }
+        .items {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 12px;
+        }
+        .item {
+          background: var(--card);
+          border: 1px solid var(--border);
+          border-left: 3px solid var(--accent);
+          border-radius: 6px;
+          padding: 12px 14px;
+        }
+        .what {
+          font-size: 14px;
+          font-weight: 600;
+          color: var(--text);
+        }
+        .why {
+          font-size: 12px;
+          color: var(--muted);
+          margin-top: 4px;
+          line-height: 1.4;
+        }
+        @keyframes pulse {
+          0%   { box-shadow: 0 0 0 0 var(--glow); }
+          70%  { box-shadow: 0 0 0 10px transparent; }
+          100% { box-shadow: 0 0 0 0 transparent; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .pulse { animation: none; }
+        }
+      </style>
+      <div class="wrap">
+        <div class="header">
+          <span class="pulse"></span>
+          <div class="title">Currently Learning</div>
+        </div>
+        <div class="items">
+          <div class="item">
+            <div class="what">PowerShell scripting</div>
+            <div class="why">Windows automation for IT support workflows</div>
+          </div>
+          <div class="item">
+            <div class="what">Active Directory</div>
+            <div class="why">User and group management at scale</div>
+          </div>
+          <div class="item">
+            <div class="what">Networking fundamentals</div>
+            <div class="why">DNS, DHCP, VPN, the OSI stack</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>

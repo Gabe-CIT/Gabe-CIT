@@ -1,0 +1,72 @@
+<svg fill="none" viewBox="0 0 850 130" width="850" height="130" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        :root {
+          --bg:      #ffffff;
+          --text:    #1f2328;
+          --muted:   #57606a;
+          --accent:  #0969da;
+          --line:    #d0d7de;
+        }
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --bg:      #0d1117;
+            --text:    #c9d1d9;
+            --muted:   #8b949e;
+            --accent:  #58a6ff;
+            --line:    #30363d;
+          }
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        .wrap {
+          width: 850px;
+          height: 130px;
+          background: var(--bg);
+          padding: 22px 32px;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+          color: var(--text);
+          border-top: 1px solid var(--line);
+        }
+        .title {
+          font-size: 22px;
+          font-weight: 700;
+          letter-spacing: -0.3px;
+        }
+        .subtitle {
+          font-size: 14px;
+          color: var(--muted);
+          margin-top: 6px;
+        }
+        .accent {
+          color: var(--accent);
+          font-weight: 600;
+        }
+        .blink {
+          display: inline-block;
+          width: 8px;
+          height: 16px;
+          background: var(--accent);
+          margin-left: 4px;
+          vertical-align: middle;
+          position: relative;
+          top: -2px;
+          animation: blink 1.1s steps(2, start) infinite;
+        }
+        @keyframes blink {
+          to { visibility: hidden; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .blink { animation: none; }
+        }
+      </style>
+      <div class="wrap">
+        <div class="title">Reach out <span class="blink"></span></div>
+        <div class="subtitle">
+          Open to questions, collaboration, and learning opportunities.
+          Find me below <span class="accent">↓</span>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
