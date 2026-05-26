@@ -29,9 +29,6 @@ as I can.
 <div align="center">
   <img src="./assets/skills-card.svg" alt="Tech stack: Python, JavaScript, Git, Shell/CLI, Windows Admin, Troubleshooting" width="100%">
 </div>
-
-<br>
-
 <div align="center">
   <img src="./assets/learning-card.svg" alt="Currently learning: PowerShell, Active Directory, networking fundamentals" width="100%">
 </div>
