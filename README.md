@@ -41,8 +41,8 @@ as I can.
 ## GitHub stats
 
 <div align="center">
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username={YOUR_USERNAME}&show_icons=true&hide_border=true&theme=transparent&include_all_commits=true&count_private=true" alt="GitHub stats">
-  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username={YOUR_USERNAME}&layout=compact&hide_border=true&theme=transparent" alt="Top languages">
+  <img height="160" src="https://github-readme-stats.vercel.app/api?username=Gabe-CIT&show_icons=true&hide_border=true&theme=transparent&include_all_commits=true&count_private=true" alt="GitHub stats">
+  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Gabe-CIT&layout=compact&hide_border=true&theme=transparent" alt="Top languages">
 </div>
 
 <br>
