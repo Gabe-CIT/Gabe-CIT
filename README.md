@@ -44,7 +44,5 @@
   &nbsp;
   <a href="https://github.com/Gabe-CIT">
     <img src="https://img.shields.io/badge/%20%20GitHub%20%20-0a0a0f?style=for-the-badge&logo=github&logoColor=7c83ff" alt="GitHub" width="200">
-adge&logo=github&logoColor=white" alt="GitHub">
-adge&logo=github&logoColor=white" alt="GitHub">
   </a>
 </p>
