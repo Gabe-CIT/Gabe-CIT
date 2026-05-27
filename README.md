@@ -1,5 +1,4 @@
-<!--
-  GitHub profile README · Liquid Tech aesthetic
+<!--   GitHub profile README · Liquid Tech aesthetic
   ---------------------------------------------
   Six self-contained SVG cards using the foreignObject technique
   to host real HTML + CSS (glass backdrop blur, gradient orb,
@@ -36,12 +35,16 @@
 
 <p align="center">
   <a href="mailto:gjunio@my.bcit.ca">
-    <img src="https://img.shields.io/badge/email-0a0a0f?style=for-the-badge&logo=gmail&logoColor=7c83ff" alt="Email">
+    <img src="https://img.shields.io/badge/%20%20Email%20Me%20%20-0a0a0f?style=for-the-badge&logo=gmail&logoColor=7c83ff" alt="Email" width="200">
   </a>
+  &nbsp;
   <a href="https://www.linkedin.com/in/gabriel-junio-b52739347">
-    <img src="https://img.shields.io/badge/linkedin-0a0a0f?style=for-the-badge&logo=linkedin&logoColor=7c83ff" alt="LinkedIn">
+    <img src="https://img.shields.io/badge/%20%20LinkedIn%20%20-0a0a0f?style=for-the-badge&logo=linkedin&logoColor=7c83ff" alt="LinkedIn" width="200">
   </a>
+  &nbsp;
   <a href="https://github.com/Gabe-CIT">
-    <img src="https://img.shields.io/badge/github-0a0a0f?style=for-the-badge&logo=github&logoColor=7c83ff" alt="GitHub">
+    <img src="https://img.shields.io/badge/%20%20GitHub%20%20-0a0a0f?style=for-the-badge&logo=github&logoColor=7c83ff" alt="GitHub" width="200">
+adge&logo=github&logoColor=white" alt="GitHub">
+adge&logo=github&logoColor=white" alt="GitHub">
   </a>
 </p>
