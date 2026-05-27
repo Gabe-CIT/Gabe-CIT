@@ -1,0 +1,83 @@
+<!-- About card -->
+<svg fill="none" viewBox="0 0 850 200" width="850" height="200" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        :root {
+          --canvas:        #fafafa;
+          --glass:         rgba(0, 0, 0, 0.035);
+          --hairline:      rgba(0, 0, 0, 0.10);
+          --hairline-shine: rgba(255, 255, 255, 0.70);
+          --text:          #1a1a1f;
+          --muted:         #5a5a64;
+          --accent:        #5e6ad2;
+        }
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --canvas:        #07080a;
+            --glass:         rgba(255, 255, 255, 0.045);
+            --hairline:      rgba(255, 255, 255, 0.08);
+            --hairline-shine: rgba(255, 255, 255, 0.18);
+            --text:          #f4f4f6;
+            --muted:         #a4a8b0;
+            --accent:        #7c83ff;
+          }
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        .canvas {
+          width: 850px;
+          height: 200px;
+          background: var(--canvas);
+          border-radius: 16px;
+          overflow: hidden;
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+        }
+        .panel {
+          width: 100%;
+          height: 100%;
+          background: var(--glass);
+          backdrop-filter: blur(24px) saturate(140%);
+          -webkit-backdrop-filter: blur(24px) saturate(140%);
+          border: 1px solid var(--hairline);
+          border-radius: 16px;
+          box-shadow: inset 0 1px 0 var(--hairline-shine);
+          padding: 28px 32px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          color: var(--text);
+        }
+        .eyebrow {
+          font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+          font-size: 11px;
+          font-weight: 600;
+          color: var(--accent);
+          letter-spacing: 0.16em;
+          margin-bottom: 8px;
+        }
+        .title {
+          font-size: 24px;
+          font-weight: 600;
+          letter-spacing: -0.4px;
+          margin-bottom: 14px;
+        }
+        .body {
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 1.55;
+          color: var(--muted);
+          max-width: 720px;
+        }
+      </style>
+      <div class="canvas">
+        <div class="panel">
+          <div class="eyebrow">// ABOUT</div>
+          <div class="title">Who I am</div>
+          <div class="body">
+            Co-op student on the IT Support team at SRK Consulting in Vancouver, learning the trade end-to-end: triaging tickets, automating the boring parts, and writing Python tools to make repeat work disappear. Background is in scripting (mostly Python, a little JavaScript) and troubleshooting; current focus is absorbing as much of the tech industry as I can.
+          </div>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>

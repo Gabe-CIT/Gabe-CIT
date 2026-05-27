@@ -1,100 +1,148 @@
-<svg fill="none" viewBox="0 0 850 220" width="850" height="220" xmlns="http://www.w3.org/2000/svg">
+<!-- Hero banner -->
+<svg fill="none" viewBox="0 0 850 280" width="850" height="280" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
         :root {
-          --bg-from: #0969da;
-          --bg-to:   #8250df;
-          --text:    #ffffff;
-          --muted:   rgba(255,255,255,0.85);
-          --accent:  #f6f8fa;
+          --orb-glass:     rgba(255, 255, 255, 0.45);
+          --orb-blur:      20px;
+          --hairline:      rgba(0, 0, 0, 0.10);
+          --hairline-shine: rgba(255, 255, 255, 0.70);
+          --text:          #1a1a1f;
+          --muted:         #5a5a64;
+          --accent:        #5e6ad2;
+          --grad-1:        #2563eb;
+          --grad-2:        #9333ea;
+          --grad-3:        #ec4899;
         }
         @media (prefers-color-scheme: dark) {
           :root {
-            --bg-from: #1f6feb;
-            --bg-to:   #a371f7;
-            --text:    #ffffff;
-            --muted:   rgba(255,255,255,0.85);
-            --accent:  #f0f6fc;
+            --orb-glass:     rgba(10, 10, 15, 0.18);
+            --orb-blur:      24px;
+            --hairline:      rgba(255, 255, 255, 0.08);
+            --hairline-shine: rgba(255, 255, 255, 0.18);
+            --text:          #f4f4f6;
+            --muted:         rgba(255, 255, 255, 0.7);
+            --accent:        #7c83ff;
+            --grad-1:        #1e3a8a;
+            --grad-2:        #7e22ce;
+            --grad-3:        #db2777;
           }
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        .banner {
+        .wrapper {
           width: 850px;
-          height: 220px;
-          background: linear-gradient(120deg, var(--bg-from), var(--bg-to), var(--bg-from));
-          background-size: 200% 200%;
-          animation: shift 12s ease-in-out infinite;
+          height: 280px;
+          position: relative;
+          overflow: hidden;
+          border-radius: 24px;
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+          color: var(--text);
+        }
+        .orb {
+          position: absolute;
+          width: 480px;
+          height: 480px;
+          border-radius: 50%;
+          background: radial-gradient(circle at 30% 30%, var(--grad-3) 0%, var(--grad-2) 35%, var(--grad-1) 70%, transparent 100%);
+          filter: blur(40px);
+          opacity: 0.85;
+          top: -120px;
+          left: -60px;
+          animation: drift 14s ease-in-out infinite alternate;
+        }
+        .panel {
+          position: absolute;
+          inset: 0;
+          background: var(--orb-glass);
+          backdrop-filter: blur(var(--orb-blur)) saturate(140%);
+          -webkit-backdrop-filter: blur(var(--orb-blur)) saturate(140%);
+          border: 1px solid var(--hairline);
+          border-radius: 24px;
+          box-shadow: inset 0 1px 0 var(--hairline-shine);
           display: flex;
           flex-direction: column;
           justify-content: center;
           padding: 0 48px;
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-          color: var(--text);
         }
-        .greeting {
-          font-size: 18px;
-          font-weight: 500;
+        .eyebrow {
+          font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+          font-size: 12px;
+          font-weight: 600;
+          color: var(--accent);
+          letter-spacing: 0.16em;
+          margin-bottom: 12px;
           opacity: 0;
           animation: fadeIn 0.6s ease-out 0.2s forwards;
         }
-        .wave { display: inline-block; animation: wave 2.4s ease-in-out infinite; transform-origin: 70% 70%; }
+        .wave {
+          display: inline-block;
+          animation: wave 2.4s ease-in-out infinite;
+          transform-origin: 70% 70%;
+          margin-left: 4px;
+        }
         .name {
-          font-size: 56px;
-          font-weight: 800;
-          letter-spacing: -1px;
-          margin-top: 6px;
+          font-size: 64px;
+          font-weight: 700;
+          letter-spacing: -2px;
+          line-height: 1.05;
           opacity: 0;
           animation: fadeIn 0.6s ease-out 0.5s forwards;
         }
         .role {
-          font-size: 20px;
+          font-size: 18px;
           font-weight: 500;
           color: var(--muted);
-          margin-top: 8px;
+          margin-top: 12px;
           opacity: 0;
           animation: fadeIn 0.6s ease-out 0.8s forwards;
         }
         .underline {
-          display: inline-block;
+          display: block;
           height: 3px;
           width: 0;
           background: var(--accent);
           border-radius: 2px;
-          margin-top: 12px;
+          margin-top: 16px;
+          box-shadow: 0 0 8px var(--accent);
           animation: grow 1s ease-out 1.2s forwards;
         }
-        @keyframes shift {
-          0%, 100% { background-position: 0% 50%; }
-          50%      { background-position: 100% 50%; }
+        @keyframes drift {
+          0%   { transform: translate(0, 0) scale(1); }
+          33%  { transform: translate(150px, 30px) scale(1.05); }
+          66%  { transform: translate(300px, -20px) scale(0.95); }
+          100% { transform: translate(500px, 50px) scale(1.1); }
         }
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(8px); }
           to   { opacity: 1; transform: translateY(0); }
         }
         @keyframes wave {
-          0%, 60%, 100% { transform: rotate( 0deg); }
+          0%, 60%, 100% { transform: rotate(0deg); }
           10%, 30%      { transform: rotate(14deg); }
           20%           { transform: rotate(-8deg); }
-          40%           { transform: rotate( 4deg); }
+          40%           { transform: rotate(4deg); }
           50%           { transform: rotate(-4deg); }
         }
         @keyframes grow {
           to { width: 120px; }
         }
         @media (prefers-reduced-motion: reduce) {
-          .banner, .greeting, .name, .role, .underline, .wave {
+          .orb, .eyebrow, .name, .role, .underline, .wave {
             animation: none !important;
             opacity: 1 !important;
           }
           .underline { width: 120px; }
         }
       </style>
-      <div class="banner">
-        <div class="greeting">Hi there <span class="wave">👋</span></div>
-        <div class="name">Gabriel</div>
-        <div class="role">IT Support Intern @ SRK Consulting · Vancouver</div>
-        <div class="underline"></div>
+      <div class="wrapper">
+        <div class="orb"></div>
+        <div class="panel">
+          <div class="eyebrow">// HELLO <span class="wave">👋</span></div>
+          <div class="name">Gabriel</div>
+          <div class="role">IT Support Intern @ SRK Consulting · Vancouver</div>
+          <span class="underline"></span>
+        </div>
       </div>
     </div>
   </foreignObject>

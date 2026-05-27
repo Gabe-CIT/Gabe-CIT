@@ -1,12 +1,14 @@
-<!-- Contact card -->
-<svg fill="none" viewBox="0 0 850 160" width="850" height="160" xmlns="http://www.w3.org/2000/svg">
+<!-- Projects card -->
+<svg fill="none" viewBox="0 0 850 200" width="850" height="200" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
         :root {
           --canvas:         #fafafa;
           --glass:          rgba(0, 0, 0, 0.035);
+          --glass-elevated: rgba(0, 0, 0, 0.04);
           --hairline:       rgba(0, 0, 0, 0.10);
+          --hairline-soft:  rgba(0, 0, 0, 0.06);
           --hairline-shine: rgba(255, 255, 255, 0.70);
           --text:           #1a1a1f;
           --muted:          #5a5a64;
@@ -16,7 +18,9 @@
           :root {
             --canvas:         #07080a;
             --glass:          rgba(255, 255, 255, 0.045);
+            --glass-elevated: rgba(255, 255, 255, 0.02);
             --hairline:       rgba(255, 255, 255, 0.08);
+            --hairline-soft:  rgba(255, 255, 255, 0.05);
             --hairline-shine: rgba(255, 255, 255, 0.18);
             --text:           rgba(255, 255, 255, 0.92);
             --muted:          rgba(255, 255, 255, 0.5);
@@ -26,7 +30,7 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         .canvas {
           width: 850px;
-          height: 160px;
+          height: 200px;
           background: var(--canvas);
           border-radius: 16px;
           overflow: hidden;
@@ -45,8 +49,8 @@
           color: var(--text);
           display: flex;
           flex-direction: column;
-          justify-content: center;
         }
+        .header { margin-bottom: 16px; }
         .eyebrow {
           font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
           font-size: 11px;
@@ -56,48 +60,55 @@
           margin-bottom: 8px;
         }
         .title {
-          font-size: 24px;
+          font-size: 22px;
           font-weight: 600;
-          letter-spacing: -0.4px;
-          display: flex;
-          align-items: center;
+          letter-spacing: -0.3px;
         }
-        .cursor {
-          display: inline-block;
-          width: 9px;
-          height: 22px;
-          background: var(--accent);
-          margin-left: 6px;
-          box-shadow: 0 0 8px var(--accent);
-          animation: blink 1.1s steps(2, start) infinite;
+        .grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 12px;
         }
-        .subtitle {
-          font-size: 14px;
-          color: var(--muted);
-          margin-top: 8px;
-          line-height: 1.5;
+        .item {
+          background: var(--glass-elevated);
+          border: 1px solid var(--hairline-soft);
+          border-radius: 8px;
+          padding: 12px 14px;
         }
-        .arrow {
+        .kind {
+          font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+          font-size: 10px;
+          font-weight: 500;
           color: var(--accent);
+          letter-spacing: 0.14em;
+          margin-bottom: 6px;
+        }
+        .what {
+          font-size: 14px;
           font-weight: 600;
-        }
-        @keyframes blink {
-          to { visibility: hidden; }
-        }
-        @media (prefers-reduced-motion: reduce) {
-          .cursor { animation: none; }
+          color: var(--text);
+          line-height: 1.35;
         }
       </style>
       <div class="canvas">
         <div class="panel">
-          <div class="eyebrow">// REACH_OUT</div>
-          <div class="title">
-            Find me here
-            <span class="cursor"></span>
+          <div class="header">
+            <div class="eyebrow">// ACTIVE</div>
+            <div class="title">What I'm on right now</div>
           </div>
-          <div class="subtitle">
-            Open to questions, collaboration, and learning opportunities.
-            Links below <span class="arrow">↓</span>
+          <div class="grid">
+            <div class="item">
+              <div class="kind">BUILDING →</div>
+              <div class="what">Mini LLM for automated junk-mail triage on a ticketing service</div>
+            </div>
+            <div class="item">
+              <div class="kind">LEARNING →</div>
+              <div class="what">Python + scikit-learn for LLM building</div>
+            </div>
+            <div class="item">
+              <div class="kind">CURIOUS ABOUT →</div>
+              <div class="what">Prompt engineering</div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,45 +1,74 @@
+<!-- Learning card -->
 <svg fill="none" viewBox="0 0 850 200" width="850" height="200" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
         :root {
-          --bg:      #ffffff;
-          --card:    #f6f8fa;
-          --border:  #d0d7de;
-          --text:    #1f2328;
-          --muted:   #57606a;
-          --accent:  #1a7f37;
-          --glow:    rgba(26,127,55,0.30);
+          --canvas:         #fafafa;
+          --glass:          rgba(0, 0, 0, 0.035);
+          --glass-elevated: rgba(0, 0, 0, 0.04);
+          --hairline:       rgba(0, 0, 0, 0.10);
+          --hairline-soft:  rgba(0, 0, 0, 0.06);
+          --hairline-shine: rgba(255, 255, 255, 0.70);
+          --text:           #1a1a1f;
+          --muted:          #5a5a64;
+          --accent:         #5e6ad2;
+          --glow:           rgba(94, 106, 210, 0.40);
         }
         @media (prefers-color-scheme: dark) {
           :root {
-            --bg:      #0d1117;
-            --card:    #161b22;
-            --border:  #30363d;
-            --text:    #c9d1d9;
-            --muted:   #8b949e;
-            --accent:  #3fb950;
-            --glow:    rgba(63,185,80,0.35);
+            --canvas:         #07080a;
+            --glass:          rgba(255, 255, 255, 0.045);
+            --glass-elevated: rgba(255, 255, 255, 0.02);
+            --hairline:       rgba(255, 255, 255, 0.08);
+            --hairline-soft:  rgba(255, 255, 255, 0.05);
+            --hairline-shine: rgba(255, 255, 255, 0.18);
+            --text:           rgba(255, 255, 255, 0.92);
+            --muted:          rgba(255, 255, 255, 0.5);
+            --accent:         #7c83ff;
+            --glow:           rgba(124, 131, 255, 0.45);
           }
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        .wrap {
+        .canvas {
           width: 850px;
           height: 200px;
-          background: var(--bg);
+          background: var(--canvas);
+          border-radius: 16px;
+          overflow: hidden;
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+        }
+        .panel {
+          width: 100%;
+          height: 100%;
+          background: var(--glass);
+          backdrop-filter: blur(24px) saturate(140%);
+          -webkit-backdrop-filter: blur(24px) saturate(140%);
+          border: 1px solid var(--hairline);
+          border-radius: 16px;
+          box-shadow: inset 0 1px 0 var(--hairline-shine);
           padding: 24px 32px;
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
           color: var(--text);
+          display: flex;
+          flex-direction: column;
+        }
+        .eyebrow {
+          font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+          font-size: 11px;
+          font-weight: 600;
+          color: var(--accent);
+          letter-spacing: 0.16em;
+          margin-bottom: 8px;
         }
         .header {
           display: flex;
           align-items: center;
           gap: 10px;
-          margin-bottom: 14px;
+          margin-bottom: 16px;
         }
         .pulse {
-          width: 10px;
-          height: 10px;
+          width: 8px;
+          height: 8px;
           border-radius: 50%;
           background: var(--accent);
           box-shadow: 0 0 0 0 var(--glow);
@@ -47,19 +76,19 @@
         }
         .title {
           font-size: 22px;
-          font-weight: 700;
+          font-weight: 600;
           letter-spacing: -0.3px;
         }
-        .items {
+        .grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 12px;
         }
         .item {
-          background: var(--card);
-          border: 1px solid var(--border);
+          background: var(--glass-elevated);
+          border: 1px solid var(--hairline-soft);
           border-left: 3px solid var(--accent);
-          border-radius: 6px;
+          border-radius: 8px;
           padding: 12px 14px;
         }
         .what {
@@ -82,23 +111,26 @@
           .pulse { animation: none; }
         }
       </style>
-      <div class="wrap">
-        <div class="header">
-          <span class="pulse"></span>
-          <div class="title">Currently Learning</div>
-        </div>
-        <div class="items">
-          <div class="item">
-            <div class="what">PowerShell scripting</div>
-            <div class="why">Windows automation for IT support workflows</div>
+      <div class="canvas">
+        <div class="panel">
+          <div class="eyebrow">// IN_PROGRESS</div>
+          <div class="header">
+            <span class="pulse"></span>
+            <div class="title">Currently learning</div>
           </div>
-          <div class="item">
-            <div class="what">Active Directory</div>
-            <div class="why">User and group management at scale</div>
-          </div>
-          <div class="item">
-            <div class="what">Networking fundamentals</div>
-            <div class="why">DNS, DHCP, VPN, the OSI stack</div>
+          <div class="grid">
+            <div class="item">
+              <div class="what">PowerShell scripting</div>
+              <div class="why">Windows automation for IT support workflows</div>
+            </div>
+            <div class="item">
+              <div class="what">Active Directory</div>
+              <div class="why">User and group management at scale</div>
+            </div>
+            <div class="item">
+              <div class="what">Networking fundamentals</div>
+              <div class="why">DNS, DHCP, VPN, the OSI stack</div>
+            </div>
           </div>
         </div>
       </div>
