@@ -34,15 +34,5 @@
 </div>
 
 <p align="center">
-  <a href="mailto:gjunio@my.bcit.ca">
-    <img src="https://img.shields.io/badge/%20%20Email%20Me%20%20-0a0a0f?style=for-the-badge&logo=gmail&logoColor=7c83ff" alt="Email" width="200">
-  </a>
-  &nbsp;
-  <a href="https://www.linkedin.com/in/gabriel-junio-b52739347">
-    <img src="https://img.shields.io/badge/%20%20LinkedIn%20%20-0a0a0f?style=for-the-badge&logo=linkedin&logoColor=7c83ff" alt="LinkedIn" width="200">
-  </a>
-  &nbsp;
-  <a href="https://github.com/Gabe-CIT">
-    <img src="https://img.shields.io/badge/%20%20GitHub%20%20-0a0a0f?style=for-the-badge&logo=github&logoColor=7c83ff" alt="GitHub" width="200">
-  </a>
+  <a href="mailto:gjunio@my.bcit.ca"><img src="https://img.shields.io/badge/%20%20Email%20Me%20%20-0a0a0f?style=for-the-badge&logo=gmail&logoColor=7c83ff" alt="Email" width="200" height="56"></a>&nbsp;<a href="https://www.linkedin.com/in/gabriel-junio-b52739347"><img src="https://img.shields.io/badge/%20%20LinkedIn%20%20-0a0a0f?style=for-the-badge&logo=linkedin&logoColor=7c83ff" alt="LinkedIn" width="200" height="56"></a>&nbsp;<a href="https://github.com/Gabe-CIT"><img src="https://img.shields.io/badge/%20%20GitHub%20%20-0a0a0f?style=for-the-badge&logo=github&logoColor=7c83ff" alt="GitHub" width="200" height="56"></a>
 </p>
